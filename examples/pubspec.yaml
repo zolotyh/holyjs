@@ -1,0 +1,20 @@
+name: example
+version: 0.0.1
+description: 'Wrike Task List Component'
+publish_to: http://pub-dev.wrke.in/
+homepage: https://www.wrike.com
+
+environment:
+  sdk: '>=1.21.1 <2.0.0'
+
+transformers:
+- $dart2js:
+    checked: false
+    minify: true
+    sourceMaps: true
+    suppressWarnings: false
+    suppressHints: false
+    csp: false
+    commandLineOptions:
+    - --trust-primitives
+    - --trust-type-annotations

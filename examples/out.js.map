@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "engine": "v1",
+  "file": "out.js",
+  "sourceRoot": "",
+  "sources": ["/usr/local/Cellar/dart/1.23.0/libexec/lib/_internal/js_runtime/lib/js_primitives.dart","main.dart","/usr/local/Cellar/dart/1.23.0/libexec/lib/_internal/js_runtime/lib/internal_patch.dart","/usr/local/Cellar/dart/1.23.0/libexec/lib/core/print.dart"],
+  "names": ["printString","main","printToConsole","print"],
+  "mappings": "A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;iBAmBAA;MACEA,IAAIA,8B;QAEFA;QACAA;;MAIFA,IAAIA,8BACAA;QACFA;QACAA;;MAIFA,IAAIA;QACFA;MAIFA,IAAIA;QACFA;QACAA;;MAMFA;KACFA,A;;;UChDAC;MC8BEC,cCpBiBC;KFRnBF,A"
+}

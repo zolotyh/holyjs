@@ -1,0 +1,1164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <title>Сравнение языков программирования</title>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/github.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style>
+      .number {
+        opacity: 0.5;
+      }
+      .reveal pre code {
+        font-size: 1.7em;
+        line-height: 1.2em;
+      }
+      mark {
+        background: #000;
+        color: #fff!important;
+      }
+      mark  * {
+        background: #000;
+        color: #fff!important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+
+      <div class="slides">
+        <section>
+          <h3>
+           ES2017 vs Typescript vs Dart. Сравниваем без эмоций
+          </h3>
+          <p>Алексей Золотых</p>
+        </section>
+        <section>
+          <img src="img/battle.jpg" alt="">
+        </section>
+        <section>
+          <table>
+            <tr>
+              <th style="text-align: center">ES 2017</th>
+              <th style="text-align: center">Typescript</th>
+              <th style="text-align: center">Dart</th>
+            </tr>
+            <tr>
+              <td width="33.3%" style="vertical-align: middle; text-align: center">
+                <img src="img/babel.png" alt="">
+              </td>
+              <td width="33.3%" style="vertical-align: middle; text-align: center">
+                <img src="img/ts.png" alt="" width="60%">
+              </td>
+              <td width="33.3%" style="vertical-align: middle; text-align: center">
+                <img style="max-height: 100%" src="img/dart.svg" alt="">
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h3>Предвзятость</h3>
+          <p class="fragment">Я люблю Dart</p>
+        </section>
+        <section data-background-image="img/marks.jpg" data-background-color="#000000">
+          <h2 class="fragment" style="background: rgba(0,0,0, 0.8); display: inline-block; padding: .5em">
+            <span>Практика — критерий истины</span>
+          </h2>
+        </section>
+        <section>
+          <h2>Тестовый проект</h2>
+          <ul>
+            <li class="fragment">Команда</li>
+            <li class="fragment">Сроки</li>
+            <li class="fragment">Требования</li>
+            <li class="fragment">UX/GUI</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Клон github</h3>
+          <img src="img/github.png" alt="">
+        </section>
+        <section>
+          <h3>Клон github</h3>
+          <ul>
+            <li class="fragment">Команда
+              <span class="fragment">&mdash; нужно найти 10 разработчиков 👍</span></li>
+            <li class="fragment">Сроки
+              <span class="fragment">&mdash; 1 год 👍</span></li>
+            <li class="fragment">
+              Требования
+              <span class="fragment">&mdash; воруем 👍</span>
+            </li>
+            <li class="fragment">
+              UX/GUI
+              <span class="fragment">&mdash; нагло воруем 👍</span>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Краткое содержание</h3>
+          <ol>
+            <li class="fragment">Качество</li>
+            <li class="fragment">Разработчики</li>
+            <li class="fragment">Сборка</li>
+            <li class="fragment">Возможности языка</li>
+            <li class="fragment">Типизация</li>
+            <li class="fragment">Производительность</li>
+          </ol>
+        </section>
+        <section>
+          <h2>
+          <span class="number">1.</span> Качество</h2>
+        </section>
+        <section>
+          <table>
+            <tr>
+              <td>Критерий</td>
+              <th>ES2017</th>
+              <th>Typescript</th>
+              <th>Dart</th>
+            </tr>
+            <tr class="fragment">
+              <td>🦄</td>
+              <td><span style="font-size: 1.2em">∞</span> /347</td>
+              <td>215</td>
+              <td>154</td>
+            </tr>
+            <tr class="fragment">
+              <td>📔</td>
+              <td class="fragment">3/10</td>
+              <td class="fragment">5/10</td>
+              <td class="fragment">8/10</td>
+            </tr>
+            <tr class="fragment">
+              <td>🐞</td>
+              <td class="fragment">76🐞 <br>91✓</td>
+              <td class="fragment">620🐞 <br>2857✓</td>
+              <td class="fragment">2015🐞 <br>878💩</td>
+            </tr>
+            <tr class="fragment">
+              <td>★</td>
+              <td class="fragment">21 000 </td>
+              <td class="fragment">22 000</td>
+              <td class="fragment">1 200</td>
+            </tr>
+            <tr class="fragment">
+              <td>Коммиты</td>
+              <td class="fragment">8 000</td>
+              <td class="fragment">17 000</td>
+              <td class="fragment">47 000</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <p>Чем больше коммитов, тем больше багов</p>
+        </section>
+        <section>
+          <h2><span class="number">1.</span>Качество</h2>
+          <ul>
+            <li class="fragment">ES2017</li>
+            <li class="fragment">Typescript</li>
+            <li class="fragment">Dart</li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+          <span class="number">1.</span>
+          Мнение жюри (качество)
+          </h2>
+        </section>
+        <section>
+          <h2><span class="number">2.</span> Разработчики</h2>
+          <ol>
+            <li class="fragment">ES2017 <span class="fragment">&mdash; все знают javascript 💪</span></li>
+            <li class="fragment">Typescript <span class="fragment">&mdash; 💪💪💪</span></li>
+            <li class="fragment">Dart <span class="fragment">&mdash; а он еще жив!? 😱</span>
+              <ul>
+                <li class="fragment">Хорошо приживаются ребята из бекенда</li>
+                <li class="fragment">Хорошо приживаются ребята из фронтенда</li>
+              </ul>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h2><span class="number">2.</span> Мнение жюри</h2>
+        </section>
+        <section>
+          <h2><span class="number">3.</span> Сборка</h2>
+        </section>
+        <section>
+          <h3><span class="number">3.1</span> Утилиты для сборки</h3>
+        </section>
+        <section>
+          <h3>TS/ES2017</h3>
+          <ul>
+            <li class="fragment">Grunt</li>
+            <li class="fragment">Gulp</li>
+            <li class="fragment">Webpack</li>
+            <li class="fragment">Rollup</li>
+            <li class="fragment">...</li>
+          </ul>
+        </section>
+        <section>
+          <p>Требуется Webpack DevOps, опыт работы 5 лет</p>
+          <img src="img/jedi.jpg" alt="">
+        </section>
+        <section>
+          <h3>Dart</h3>
+          <p class="fragment">pub
+            <span class="fragment">&mdash; из коробки</span>
+          </p>
+        </section>
+        <section>
+          <h3><span class="number">3.2</span> Пакетный менеджер</h3>
+        </section>
+        <section>
+          <h3>TS/ES2017</h3>
+          <ul>
+            <li class="fragment">bower</li>
+            <li class="fragment">npm</li>
+            <li class="fragment">yarn</li>
+            <li class="fragment">pnpm</li>
+            <li class="fragment">...</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Dart</h3>
+          <p class="fragment">pub
+            <span class="fragment">&mdash; из коробки</span>
+          </p>
+        </section>
+        <section>
+          <blockquote>
+            Должен существовать один — и,&nbsp;желательно, только один — очевидный способ сделать это.
+          </blockquote>
+        </section>
+        <section>
+          <h2>npm vs pub</h2>
+          <table>
+            <tr>
+              <td></td>
+              <th>npm</th>
+              <th>pub</th>
+            </tr>
+            <tr class="fragment">
+              <th>Разные версии</th>
+              <td >
+                <span class="fragment">✓</span>
+              </td>
+              <td><span class="fragment">⛔️ </span> </td>
+            </tr>
+            <tr class="fragment">
+              <th>Lock зависимостей</th>
+              <td><span class="fragment">✓</span></td>
+              <td><span class="fragment">✓</span></td>
+            </tr>
+            <tr class="fragment">
+              <th>Способ хранения зависимостей</th>
+              <td><span class="fragment">копии файлов</span></td>
+              <td><span class="fragment">символьные ссылки</span></td>
+            </tr>
+            <tr class="fragment">
+              <th>Размер на диске</th>
+              <td><span class="fragment">500мб</span></td>
+              <td><span class="fragment">600кб</span></td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h3><span class="number">3.3</span> Компиляция</h3>
+        </section>
+        <section>
+          <h3>
+            ES2017
+          </h3>
+          <ul>
+            <li class="fragment">
+              Сборка не нужна
+            </li>
+            <li class="fragment">
+              ES2017 ⟶ ES5  + <img style="height: 1.5em; margin: 0; vertical-align: middle" src="img/crutch.svg" alt="">
+            </li>
+            <li class="fragment">
+              ES2017 ⟶ Проверка типов ⟶ ES5  + <img style="height: 1.5em; margin: 0; vertical-align: middle" src="img/crutch.svg" alt="">
+            </li>
+          </ul>
+        </section>
+        <section data-background-video='img/babel_src.mov'></section>
+        <section>
+          <h3>Typescript</h3>
+          <p style="text-align: left" class="fragment">
+            <img src="img/ts.png" style="width: 1.5em; vertical-align: middle; margin: 0" alt="">
+             ⟶  проверка типов ⟶ ES5 + <img style="height: 1.5em; margin: 0; vertical-align: middle" src="img/crutch.svg" alt="">
+          </p>
+          <p style="text-align: left" class="fragment">
+            <img src="img/ts.png" style="width: 1.5em; vertical-align: middle; margin: 0" alt="">
+             ⟶  проверка типов ⟶ ES2017  ⟶  ES5 + <img style="height: 1.5em; margin: 0; vertical-align: middle" src="img/crutch.svg" alt="">
+          </p>
+        </section>
+        <section data-background-video='img/ts_src.mov'></section>
+        <section>
+          <h3>Dart</h3>
+          <p class="fragment">
+            <img src="img/dart.png" style="width: 3em; vertical-align: middle; margin: 0" alt="">⟶  проверка типов ⟶
+            <span style="font-size: 2em; vertical-align: middle">🛵</span>
+          </p>
+        </section>
+        <section data-background-video='img/dart.mov'></section>
+        <section>
+          <h2>дерево-встряхивании</h2>
+          <p class="fragment">
+            tree-shaking
+          </p>
+        </section>
+        <section>
+          Webpack + ES2017
+        </section>
+        <section data-transition="none">
+          <p>math.js</p>
+          <pre><code data-noescape data-trim>export function square(x) {
+    return x * x;
+}
+
+export function cube(x) {
+    return x * x * x;
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <p>math.js</p>
+          <pre><code data-noescape data-trim><mark>export function square(x) {
+    return x * x;
+}</mark>
+
+export function cube(x) {
+    return x * x * x;
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <p>math.js</p>
+          <pre><code data-noescape data-trim>export function square(x) {
+    return x * x;
+}
+
+<mark>export function cube(x) {
+    return x * x * x;
+}</mark></code></pre>
+        </section>
+        <section data-transition="slide none">
+          <p>main.js</p>
+          <pre><code>import {cube} from './math.js';
+console.log(cube(5)); // 125</code></pre>
+        </section>
+        <section data-transition="none">
+        <p>Выходной файл</p>
+        <pre><code>console.log(
+  function(n){return n*n*n}(5)
+)</code></pre>
+        </section>
+        <section data-transition="none">
+        <p>Выходной файл</p>
+        <pre><code data-noescape>console.log(
+  <mark>function(n){return n*n*n}</mark>(5)
+)</code></pre>
+        </section>
+        <section>
+        <p>А что же Dart?</p>
+        <pre class="fragment"><code>main: function() {
+  H.printString("125");
+}
+        </code></pre>
+        </section>
+        <section>
+          <h2>Angular &mdash; размер сборки</h2>
+          <ul>
+            <li class="fragment">TS &mdash; 383 кб</li>
+            <li class="fragment">Dart &mdash; 270 кб</li>
+          </ul>
+        </section>
+        <section>
+          <h2><span class="number">3.</span> Сборка</h2>
+          <ul>
+            <li class="fragment">Dart</li>
+            <li class="fragment">Typescript</li>
+            <li class="fragment">ES2017</li>
+          </ul>
+        </section>
+        <section>
+          <h2><span class="number">3.</span> Мнение жюри</h2>
+        </section>
+        <section>
+          <h2><span class="number">4.</span> Возможности языка</h2>
+        </section>
+        <section>
+          <h3><span class="number">4.1</span> Асинхронность</h3>
+        </section>
+        <section data-transition="slide none">
+          <h3>Typescript/ES2017</h3>
+          <pre><code data-noescape data-trim>async function sleep() {
+  console.log('before');
+  var callback = cb => setTimeout(cb);
+  await new Promise(callback);
+  console.log('after');
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Typescript/ES2017</h3>
+          <pre><code data-noescape data-trim><mark>async</mark> function sleep() {
+  console.log('before');
+  var callback = cb => setTimeout(cb);
+  await new Promise(callback);
+  console.log('after');
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Typescript/ES2017</h3>
+          <pre><code data-noescape data-trim>async function sleep() {
+  console.log('before');
+  var callback = cb => setTimeout(cb);
+  <mark>await</mark> new Promise(callback);
+  console.log('after');
+}</code></pre>
+        </section>
+        <section data-transition="slide none">
+          <h3>Typescript/ES2017</h3>
+          <pre><code data-noescape data-trim>async function sleep() {
+  console.log('before');
+  var callback = cb => <mark>setTimeout(cb)</mark>;
+  await new Promise(<mark>callback</mark>);
+  console.log('after');
+}</code></pre>
+        </section>
+        <section>
+          <img src="img/itak.jpg" alt="">
+        </section>
+        <section data-transition="slide none">
+          <h2>Dart</h2>
+          <pre><code>Future timer() async {
+  print('before');
+  await new Future.delayed(...);
+  print('after');
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <h2>Dart</h2>
+          <pre><code data-noescape data-trim>Future timer() <mark>async</mark> {
+  print('before');
+  <mark>await</mark> new Future.delayed(...);
+  print('after');
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <h2>Dart</h2>
+          <pre><code data-noescape><mark>Future</mark> timer() async {
+  print('before');
+  await new Future.delayed(...);
+  print('after');
+}</code></pre>
+        </section>
+        <section data-transition="slide none">
+          <h2>Dart</h2>
+          <pre><code data-noescape data-trim>Future timer() async {
+  print('before');
+  await <mark>new Future.delayed(...)</mark>;
+  print('after');
+}</code></pre>
+        </section>
+        <section>
+          <h4>Генераторы</h4>
+        </section>
+        <section>
+          <h3>Typescript/ES2017</h3>
+          <pre><code style="font-size: 1em" data-noescape>function* naturalsTo(n: Number): IterableIterator&lt;Number&gt; {
+  let k = 0;
+  while(k < n) yield i++;
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <h3>Typescript/ES2017</h3>
+          <pre><code style="font-size: 1em" data-noescape>function* naturalsTo(n: Number): IterableIterator&lt;Number&gt; {
+  let k = 0;
+  while(k < n) <mark>yield i++</mark>;
+}</code></pre>
+        </section>
+        <section>
+          <pre><code style="font-size: 1.2em" data-trim data-noescape>
+interface IterableIterator&lt;T&gt; extends Iterator&gt;T&gt; {
+    [Symbol.iterator](): IterableIterato&gt;T&gt;
+}
+          </code></pre>
+        <pre><code style="font-size: 1.2em" data-noescape>interface Iterator&lt;T&gt; {
+  next(value?: any): IteratorResult&lt;T&gt;
+  return?(value?: any): IteratorResult&lt;T&gt;
+  throw?(e?: any): IteratorResult&lt;T&gt;
+}</code></pre>
+        </section>
+        <section>
+          <h3>Dart</h3>
+          <pre><code>Iterable&lt;int&gt; naturalsTo(n) sync* {
+  int k = 0;
+  while (k < n) yield k++;
+}</code></pre>
+        </section>
+        <section>
+        <h3>Iterable</h3>
+        <ul style="font-size: .5em">
+          <li>any(bool f(E element)) &rarr; bool</li>
+          <li>contains(Object element) &rarr; bool</li>
+          <li>elementAt(int index) &rarr; E</li>
+          <li>every(bool f(E element)) &rarr; bool</li>
+          <li>expand&lt;T&gt;(Iterable&lt;T&gt; f(E element)) &rarr; Iterable&lt;T&gt;</li>
+          <li>firstWhere(bool test(E element), { E orElse() }) &rarr; E</li>
+          <li>fold&lt;T&gt;(T initialValue, T combine(T previousValue, E element)) &rarr; T</li>
+          <li>forEach(void f(E element)) &rarr; void</li>
+          <li>join([String separator = &quot;&quot; ]) &rarr; String</li>
+          <li>lastWhere(bool test(E element), { E orElse() }) &rarr; E</li>
+          <li>map&lt;T&gt;(T f(E e)) &rarr; Iterable&lt;T&gt;</li>
+          <li>reduce(E combine(E value, E element)) &rarr; E</li>
+          <li>singleWhere(bool test(E element)) &rarr; E</li>
+          <li>skip(int count) &rarr; Iterable&lt;E&gt;</li>
+          <li>skipWhile(bool test(E value)) &rarr; Iterable&lt;E&gt;</li>
+          <li>take(int count) &rarr; Iterable&lt;E&gt;</li>
+          <li>takeWhile(bool test(E value)) &rarr; Iterable&lt;E&gt;</li>
+          <li>toList({bool growable: true }) &rarr; List&lt;E&gt;</li>
+          <li>toSet() &rarr; Set&lt;E&gt;</li>
+          <li>toString() &rarr; String</li>
+          <li>where(bool test(E element)) &rarr; Iterable&lt;E&gt;</li>
+        </ul>
+        </section>
+        <section>
+          <pre><code style="font-size: 1.2em" data-trim data-noescape>Iterable naturalsDownFrom(n) sync* {
+  if (n &gt; 0) {
+     yield n;
+     for (int i in naturalsDownFrom(n-1)) { yield i; }
+  }
+}
+</code></pre>
+        </section>
+        <section>
+          <pre><code style="font-size: 1.2em" data-trim data-noescape>Iterable naturalsDownFrom(n) sync* {
+  if ( n &gt; 0) {
+    yield n;
+    yield* naturalsDownFrom(n-1);
+ }
+}</code></pre>
+        </section>
+        <section>
+        <h4>Typescript/ES2017</h4>
+        <pre><code>async function* f(p) {
+  yield 1;
+  await p;
+  yield* [2, 3];
+  yield* (async function *() { 
+    await p; 
+    yield 4; 
+  })();
+}</code></pre>
+        </section>
+        <section>
+        <h4>Typescript/ES2017</h4>
+          <pre><code>async function* g() { ... }
+async function f() {
+  for await (const x of g()) {
+  }
+}</code></pre>
+        </section>
+        <section data-transition="slide none">
+        <h4>Dart</h4>
+<pre><code>Stream asynchronousNaturalsTo(n) async* {
+  int k = 0;
+  while (k &lt; n) yield k++;
+}</code></pre>
+        </section>
+        <section data-transition="none">
+        <h4>Dart</h4>
+<pre><code data-trim data-noescape><mark>Stream</mark> asynchronousNaturalsTo(n) async* {
+  int k = 0;
+  while (k &lt; n) yield k++;
+}</code></pre>
+        </section>
+        <section data-transition="none">
+          <h4>Stream</h4>
+					<ul style="font-size: 0.3em">
+						<li>any(bool test(T element)) &rarr; Future&lt;bool&gt;</li>
+						<li>asBroadcastStream({void onListen(StreamSubscription&lt;T&gt; subscription), void onCancel(StreamSubscription&lt;T&gt; subscription) }) &rarr; Stream&lt;T&gt;</li>
+						<li>transform&lt;S&gt;(StreamTransformer&lt;T, S&gt; streamTransformer) &rarr; Stream&lt;S&gt;</li>
+						<li>asyncExpand&lt;E&gt;(Stream&lt;E&gt; convert(T event)) &rarr; Stream&lt;E&gt;</li>
+						<li>asyncMap&lt;E&gt;(dynamic convert(T event)) &rarr; Stream&lt;E&gt;</li>
+						<li>contains(Object needle) &rarr; Future&lt;bool&gt;</li>
+						<li>distinct([bool equals(T previous, T next) ]) &rarr; Stream&lt;T&gt;</li>
+						<li>drain&lt;E&gt;([E futureValue ]) &rarr; Future&lt;E&gt;</li>
+						<li>Discards all data on the stream, but signals when it's done or an error occurred.</li>
+						<li>elementAt(int index) &rarr; Future&lt;T&gt;</li>
+						<li>every(bool test(T element)) &rarr; Future&lt;bool&gt;</li>
+						<li>expand&lt;S&gt;(Iterable&lt;S&gt; convert(T value)) &rarr; Stream&lt;S&gt;</li>
+						<li>firstWhere(bool test(T element), { Object defaultValue() }) &rarr; Future</li>
+						<li>fold&lt;S&gt;(S initialValue, S combine(S previous, T element)) &rarr; Future&lt;S&gt;</li>
+						<li>forEach(void action(T element)) &rarr; Future</li>
+						<li>handleError(Function onError, { bool test(error) }) &rarr; Stream&lt;T&gt;</li>
+						<li>join([String separator = &quot;&quot; ]) &rarr; Future&lt;String&gt;</li>
+						<li>lastWhere(bool test(T element), { Object defaultValue() }) &rarr; Future</li>
+						<li>listen(void onData(T event), { Function onError, void onDone(), bool cancelOnError }) &rarr; StreamSubscription&lt;T&gt;</li>
+						<li>map&lt;S&gt;(S convert(T event)) &rarr; Stream&lt;S&gt;</li>
+						<li>pipe(StreamConsumer&lt;T&gt; streamConsumer) &rarr; Future</li>
+						<li>reduce(T combine(T previous, T element)) &rarr; Future&lt;T&gt;</li>
+						<li>singleWhere(bool test(T element)) &rarr; Future&lt;T&gt;</li>
+						<li>skip(int count) &rarr; Stream&lt;T&gt;</li>
+						<li>skipWhile(bool test(T element)) &rarr; Stream&lt;T&gt;</li>
+						<li>take(int count) &rarr; Stream&lt;T&gt;</li>
+						<li>takeWhile(bool test(T element)) &rarr; Stream&lt;T&gt;</li>
+						<li>timeout(Duration timeLimit, { void onTimeout(EventSink&lt;T&gt; sink) }) &rarr; Stream&lt;T&gt;</li>
+						<li>toList() &rarr; Future&lt;List&lt;T&gt;&gt;</li>
+						<li>toSet() &rarr; Future&lt;Set&lt;T&gt;&gt;</li>
+						<li>where(bool test(T event)) &rarr; Stream&lt;T&gt;</li>
+						<li>noSuchMethod(Invocation invocation) &rarr; dynamic</li>
+						<li>toString() &rarr; String</li>
+					</ul>
+        </section>
+        <section data-transition="none">
+          <h4>Stream</h4>
+					<ul style="font-size: 0.3em">
+						<li style="opacity: 0.3">any(bool test(T element)) &rarr; Future&lt;bool&gt;</li>
+						<li style="opacity: 0.3">asBroadcastStream({void onListen(StreamSubscription&lt;T&gt; subscription), void onCancel(StreamSubscription&lt;T&gt; subscription) }) &rarr; Stream&lt;T&gt;</li>
+						<li style="font-size: 2em">transform&lt;S&gt;(StreamTransformer&lt;T, S&gt; streamTransformer) &rarr; Stream&lt;S&gt;</li>
+						<li style="opacity: 0.3">asyncExpand&lt;E&gt;(Stream&lt;E&gt; convert(T event)) &rarr; Stream&lt;E&gt;</li>
+						<li style="opacity: 0.3">asyncMap&lt;E&gt;(dynamic convert(T event)) &rarr; Stream&lt;E&gt;</li>
+						<li style="opacity: 0.3">contains(Object needle) &rarr; Future&lt;bool&gt;</li>
+						<li style="opacity: 0.3">distinct([bool equals(T previous, T next) ]) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">drain&lt;E&gt;([E futureValue ]) &rarr; Future&lt;E&gt;</li>
+						<li style="opacity: 0.3">Discards all data on the stream, but signals when it's done or an error occurred.</li>
+						<li style="opacity: 0.3">elementAt(int index) &rarr; Future&lt;T&gt;</li>
+						<li style="opacity: 0.3">every(bool test(T element)) &rarr; Future&lt;bool&gt;</li>
+						<li style="opacity: 0.3">expand&lt;S&gt;(Iterable&lt;S&gt; convert(T value)) &rarr; Stream&lt;S&gt;</li>
+						<li style="opacity: 0.3">firstWhere(bool test(T element), { Object defaultValue() }) &rarr; Future</li>
+						<li style="opacity: 0.3">fold&lt;S&gt;(S initialValue, S combine(S previous, T element)) &rarr; Future&lt;S&gt;</li>
+						<li style="opacity: 0.3">forEach(void action(T element)) &rarr; Future</li>
+						<li style="opacity: 0.3">handleError(Function onError, { bool test(error) }) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">join([String separator = &quot;&quot; ]) &rarr; Future&lt;String&gt;</li>
+						<li style="opacity: 0.3">lastWhere(bool test(T element), { Object defaultValue() }) &rarr; Future</li>
+						<li style="opacity: 0.3">listen(void onData(T event), { Function onError, void onDone(), bool cancelOnError }) &rarr; StreamSubscription&lt;T&gt;</li>
+						<li style="opacity: 0.3">map&lt;S&gt;(S convert(T event)) &rarr; Stream&lt;S&gt;</li>
+						<li style="opacity: 0.3">pipe(StreamConsumer&lt;T&gt; streamConsumer) &rarr; Future</li>
+						<li style="opacity: 0.3">reduce(T combine(T previous, T element)) &rarr; Future&lt;T&gt;</li>
+						<li style="opacity: 0.3">singleWhere(bool test(T element)) &rarr; Future&lt;T&gt;</li>
+						<li style="opacity: 0.3">skip(int count) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">skipWhile(bool test(T element)) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">take(int count) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">takeWhile(bool test(T element)) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">timeout(Duration timeLimit, { void onTimeout(EventSink&lt;T&gt; sink) }) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">toList() &rarr; Future&lt;List&lt;T&gt;&gt;</li>
+						<li style="opacity: 0.3">toSet() &rarr; Future&lt;Set&lt;T&gt;&gt;</li>
+						<li style="opacity: 0.3">where(bool test(T event)) &rarr; Stream&lt;T&gt;</li>
+						<li style="opacity: 0.3">noSuchMethod(Invocation invocation) &rarr; dynamic</li>
+						<li style="opacity: 0.3">toString() &rarr; String</li>
+					</ul>
+        </section>
+        <section>
+          <p>RxJS &mdash; потоки для бедных</p>
+          <p class="fragment">За все нужно платить</p>
+        </section>
+        <section>
+          <h2><span class="number">4.3</span> Коллекции</h2>
+        </section>
+        <section>
+          <p>Про что это?! Array, Object?</p>
+          <p class="fragment">Map, Set?</p>
+        </section>
+        <section>
+          <p>Маp и Set есть в ES2017 и в Typescript</p>
+        </section>
+        <section data-background-video='img/map_js.mov'></section>
+        <section>
+          <h2>Dart</h2>
+        </section>
+        <section data-background-video='img/dart_map_3.mov'></section>
+        <section data-background="img/tomato.jpg"></section>
+        <section data-background-video="img/map_2.mov"></section>
+          <section>
+            <h3>Перегрузка операторов в Dart</h3>
+            <pre><code style="font-size: 1em" data-noescape data-trim>
+class MyClass {
+  operator ==(MyClass other) {
+  // compare this to other
+  }
+  operator [](int i) => list[i]; // get
+  operator []=(int i, int value) => _list[i] = value; // set
+}
+            </code></pre>
+          </section>
+        <section>
+          <ul>
+            <li>DoubleLinkedQueue</li>
+            <li>HashMap</li>
+            <li>HashSet</li>
+            <li>Map</li>
+            <li>Set</li>
+            <li>LinkedHashSet</li>
+            <li>LinkedList</li>
+            <li>LinkedHashMap</li>
+            <li>...</li>
+          </ul>
+        </section>
+        <section data-transition="none">
+          <h2><span class="number">4.4</span> Зоны</h2>
+          <pre><code data-noescape data-trim style="font-size: .9em">import 'dart:async';
+
+main() {
+  foo();
+  var future;
+  runZoned(() {          // Starts a new child zone (zone #2).
+    future = new Future(bar).then(baz);
+  });
+  future.then(qux);
+}
+
+foo() => ...foo-body...  // Executed twice (once each in two zones).
+bar() => ...bar-body...
+baz(x) => runZoned(() => foo()); // New child zone (zone #3).
+qux(x) => ...qux-body...</code></pre>
+        </section>
+        <section data-transition="none">
+          <h2><span class="number">4.4</span> Зоны</h2>
+          <pre><code data-noescape data-trim style="font-size: .9em">import 'dart:async';
+
+main() {
+  foo();
+  var future;
+  <mark>runZoned(() {</mark>          // Starts a new child zone (zone #2).
+    <mark>future = new Future(bar).then(baz);</mark>
+  <mark>});</mark>
+  future.then(qux);
+}
+
+foo() => ...foo-body...  // Executed twice (once each in two zones).
+bar() => ...bar-body...
+baz(x) => <mark>runZoned(() => foo());</mark> // New child zone (zone #3).
+qux(x) => ...qux-body...</code></pre>
+        </section>
+        <section>
+          <img src="img/zone.png" alt="">
+        </section>
+        <section>
+          <h2><span class="number">4.5</span> Ленивая подгрузка модулей</h2>
+          <pre><code>import 'package:deferred/hello.dart' deferred as hello;
+greet() async {
+  await hello.loadLibrary();
+  hello.printGreeting();
+}
+          </code></pre>
+        </section>
+        <section>
+          <h2><span class="number">4.6</span> Деструктуризация</h2>
+        </section>
+        <section>
+          <p>Деструктуризация в typescript/ES2017</p>
+          <pre><code style="font-size: 1.2em" data-trim data-noescape>
+let [firstName, lastName] = ["Alex", "Zolotykh"];
+console.log(firstName, lastName); // Alex, Zolotyh</code></pre>
+        </section>
+        <section>
+          <p>Деструктуризация в Dart</p>
+          <pre><code style="font-size: 1.2em" data-trim data-noescape>
+var {x, m*, y} = [5, 2, 3, 1];
+
+assert(x == 5);
+assert(y == 1);
+assert(m == [2, 3]);
+</code></pre>
+        </section>
+          <section>
+            <h3><span class="number">4.7</span> Взаимодействие с JS</h3>
+          </section>
+          <section>
+            <h4>ES2017</h4>
+          </section>
+          <section>
+            <h4>Typescript</h4>
+            <p>Все или почти все типы написаны!</p>
+            <a href="https://github.com/typings/typings">github.com/typings/typings</a>
+            <p class="fragment">Можно написать свое</p>
+          </section>
+          <section>
+            <h4>Dart
+              <span class="fragment">💩</span>
+            </h4>
+          </section>
+          <section>
+            <pre><code style="font-size: 1em">
+@JS()
+external printOptions(Options options);
+
+@JS()
+@anonymous
+class Options {
+  external bool get responsive;
+
+  external factory Options({bool responsive});
+}</code></pre>
+          </section>
+          <section>
+            <p>В dart нет arguments</p>
+            <pre><code>function(){
+  console.log(arguments);
+}</code></pre>
+          </section>
+          <section>
+            <p>noSuchMethod в Dart</p>
+            <code><pre>class MyClass {
+  noSuchMethod(String name, List args){
+    print('$name, ${args.length}')
+  }
+}</pre></code>
+          </section>
+          <section>
+            <h2><span class="number">4.</span> Возможности</h2>
+            <ul>
+              <li class="fragment">Dart</li>
+              <li class="fragment">ES2017</li>
+              <li class="fragment">Typescript</li>
+            </ul>
+          </section>
+          <section>
+            <h2><span class="number">4.</span> Мнение жюри</h2>
+          </section>
+          <section>
+            <h2>5. Типизация</h2>
+          </section>
+          <section>
+          <img src="img/book.jpeg" alt="">
+          </section>
+          <section>
+            ES2017
+            <p>Можно использовать Flow</p>
+          </section>
+          <section>
+            Typescript
+          </section>
+          <section>
+<pre><code style="font-size: 1.5em" data-noescape data-trim>
+interface Conference {
+    method2();
+}
+<span class="fragment">
+class HolyJS implements Conference {
+    method2() {
+        console.log(3);
+    }
+}
+</span></code></pre>
+        </section>
+        <section>
+<pre><code data-noescape data-trim>
+var HolyJS = (function () {
+
+  <span class="fragment">function HolyJS() {...}</span>
+
+  <span class="fragment">HolyJS.prototype.method = function () {...};</span>
+
+  <span class="fragment">// Фиг вам! А не интерфейс</span>
+  return HolyJS;
+}());
+</code></pre>
+        </section>
+        <section>
+          <pre><code style="font-size: 1em" data-noescape data-trim>
+<span>abstract class Conference { void method(); }</span>
+<span class="fragment">
+class HolyJS implements Conference {
+  void method(){ print('Hahaha!');}
+}</span>
+
+<span class="fragment">void main(){
+  var holy2017 = new HolyJS();
+  print(holy2017 is Conference);
+}
+</span>
+          </code></pre>
+        </section>
+        <section>
+          <code class="javascript"><pre>
+H.printString("true");
+</pre></code>
+        </section>
+        <section>
+          <p>Non-Nullable Types (Typescript/Flow)</p>
+          <pre class="fragment"><code>let name: string;
+name = "Marius";   // OK
+name = null;       // OK
+name = undefined;  // OK</code></pre>
+        </section>
+        <section>
+          <p>Typescript (--strictNullChecks)</p>
+          <pre class="fragment"><code>// Compiled with --strictNullChecks
+
+let name: string;
+name = "Marius";   // OK
+name = null;       // Error
+name = undefined;  // Error</code></pre>
+        </section>
+        <section>
+          <p>Typescript (--strictNullChecks)</p>
+          <pre class="fragment"><code>let name: string | null;
+name = "Marius";   // OK
+name = null;       // OK
+name = undefined;  // Error</code></pre>
+        </section>
+        <section>
+          <p>Чем ответит Dart?</p>
+        </section>
+        <section>
+          <ul>
+            <li>??</li>
+            <li class="fragment">??=</li>
+            <li class="fragment">?.</li>
+          </ul>
+          <p class="fragment">Null-aware операторы</p>
+        </section>
+        <section>
+          <p>exp ?? otherExp</p>
+          <p class="fragment">((x) => x == null ? otherExp : x)(exp)</p>
+        </section>
+        <section>
+          <p>obj ??= value</p>
+          <p class="fragment">((x) => x == null ? obj = value : x)(obj)</p>
+        </section>
+        <section>
+          <p>obj?.method()</p>
+          <p class="fragment">((x) => x == null ? null : x.method())(obj)</p>
+          <p class="fragment"> obj?.child?.child?.getter</p>
+        </section>
+        <section>
+          <h2>Types in runtime</h2>
+          <pre><code>String result;
+var tempResult = 1 + 2;
+if (tempResult is! String) {
+  throw "Type Mismatch!!";
+} else {
+  result = tempResult;
+}
+print(result);
+</code></pre>
+        </section>
+        <section>
+          <h2>
+            <span class="number">5.</span> Типизация</h2>
+          <ul>
+            <li class="fragment">Typescript</li>
+            <li class="fragment">Dart</li>
+            <li class="fragment">ES2017</li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            <span class="number">5.</span> Мнение жюри</h2>
+        </section>
+        <section>
+            <h2> 6. Производительность</h2>
+        </section>
+        <section>
+          <p>Серьезно!?</p>
+        </section>
+        <section>
+          <p>Think of dart2js as a real compiler, which can analyze your entire program and make optimizations that you probably can’t or won’t do</p>
+        </section>
+        <section>
+          <p>We don’t claim that all Dart code will run faster than handwritten JavaScript, when compiled to JavaScript, but we’re working to make the common cases fast.</p>
+        </section>
+        <section>
+          <h3>Два представления объекта в V8</h3>
+          <ul>
+            <li class="fragment">Dictionary mode - объект &mdash; ключ, значение &mdash; хеш-мап</li>
+            <li class="fragment">Fast mode - объекты хранятся как структуры, в которых нет вычислений, участвующих в доступе к свойству</li>
+          </ul>
+        </section>
+        <section>
+          <h3>после Dart2JS</h3>
+          <pre><code>function convertToFastObject(properties) {
+    function MyClass() {}
+    MyClass.prototype = properties;
+    new MyClass();
+    return properties;
+  }</code></pre>
+</section>
+<section data-transition="none">
+  <h3>Dart</h3>
+  <pre><code>void main() {
+  List array = new List()
+   ..add(null)
+   ..add(null)
+   ..add(null);
+  
+ array.forEach((a){print(a);});
+}</code></pre>
+</section>
+<section data-transition="none">
+  <h3>Dart</h3>
+  <pre><code data-noescape data-trim>void main() {
+  List array = new List()
+   <mark>..add(null)</mark>
+   ..add(null)
+   ..add(null);
+  
+ array.forEach((a){print(a);});
+}</code></pre>
+</section>
+<section data-transition="none">
+  <h3>Dart</h3>
+  <pre><code data-noescape data-trim>
+void main() {
+  List array = new List()
+   ..add(null)
+   ..add(null)
+   ..add(null);
+  
+ <mark>array.forEach((a){print(a);});</mark>
+}
+  </code></pre>
+</section>
+<section>
+  <pre><code style="font-size: 1.2em">
+...
+main: function() {
+      var array = [];
+      array.push(null);
+      array.push(null);
+      array.push(null);
+      C.JSArray_methods
+        .forEach$1(array, new F.main_closure());
+    }
+...
+  </code></pre>
+</section>
+<section data-transition="none">
+  <pre><code style="font-size: 1.2em" data-noescape data-trim>main: function() {
+      var array = [];
+      array.push(null);
+      array.push(null);
+      array.push(null);
+      C.JSArray_methods
+       <mark>.forEach$1(array, new F.main_closure());</mark>
+    },</code></pre>
+</section>
+<section data-transition="none">
+  <pre><code>...
+forEach$1: function(receiver, f) {
+  var end, i;
+  end = receiver.length;
+  for (i = 0; i < end; ++i) {
+    f.call$1(receiver[i]);
+    if (receiver.length !== end)
+      throw H.wrapException(new P.ConcurrentModificationError(receiver));
+   }
+},
+...</code></pre>
+</section>
+<section data-transition="none">
+  <pre><code data-noescape data-trim>...
+forEach$1: function(receiver, f) {
+  var end, i;
+  end = receiver.length;
+  <mark>for (i = 0; i < end; ++i) {</mark>
+    f.call$1(receiver[i]);
+    if (receiver.length !== end)
+      throw H.wrapException(new P.ConcurrentModificationError(receiver));
+   }
+},
+...</code></pre>
+</section>
+<section>
+  <h3>До Typescript</h3>
+  <pre><code>[null, null, null]
+    .forEach((a) => {
+        console.log(null)
+    });</code></pre>
+</section>
+<section data-transition="none">
+  <h3>После Typescript</h3>
+  <pre><code>[null, null, null]
+    .forEach((a) => {
+        console.log(null)
+    });</code></pre>
+</section>
+<section>
+  <h3>Dart</h3>
+  <pre><code data-noescape data-trim>void main() {
+  Map map = new Map();
+  map[1] = null;
+  map['1'] = 1;
+  map[{}] = 2;
+
+ map.forEach((a,v){print(v);});
+}</code></pre>
+</section>
+<section>
+  <pre><code>
+...
+main: function() {
+  var map = new H.JsLinkedHashMap(0, null, null, null, null, null, 0);
+  map.$indexSet(0, 1, null);
+  map.$indexSet(0, "1", 1);
+  map.$indexSet(0, P.LinkedHashMap_LinkedHashMap$_empty(), 2);
+  map.forEach$1(0, new F.main_closure());
+},
+...
+</code></pre>
+</section>
+<section>
+  <pre><code data-noescape data-trim>$indexSet: function(_, key, value) {
+  <span class="fragment">if (typeof key === "string") { this._addHashTableEntry$3(strings, key, value); }</span>
+  <span class="fragment">else if (typeof key === "number") { ...  this._addHashTableEntry$3(nums, key, value); }</span>
+  <span class="fragment">else { ...  // Save anothers }</span>
+},</code></pre>
+</section>
+<section>
+  <h2><span class="number">6.</span> Результат</h2>
+  <ul>
+    <li class="fragment">Dart</li>
+    <li class="fragment">Typescript</li>
+    <li class="fragment">ES2017</li>
+  </ul>
+</section>
+<section>
+  <h2><span class="number">6.</span> мнение жюри</h2>
+</section>
+<section>
+  <h2>Подводим итоги</h2>
+</section>
+<section>
+  Вопросы?
+</section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    history: true,
+
+    // More info https://github.com/hakimel/reveal.js#dependencies
+    dependencies: [
+      { src: 'plugin/markdown/marked.js' },
+      { src: 'plugin/markdown/markdown.js' },
+      { src: 'plugin/notes/notes.js', async: true },
+      { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+    ]
+  });
+    </script>
+  </body>
+</html>
